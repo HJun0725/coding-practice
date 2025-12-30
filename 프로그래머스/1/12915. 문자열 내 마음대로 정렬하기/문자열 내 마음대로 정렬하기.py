@@ -10,7 +10,7 @@ def solution(strings, n):
                         break
                     elif strings[i][k] < strings[i+1][k]:
                         break
-                    elif k+1 == min(len(strings[i]), len(strings[i+1])) and strings[i][k] == strings[i+1][k]:
+                if strings[i][k] == strings[i+1][k]:
                         if len(strings[i]) > len(strings[i+1]):
                             strings[i], strings[i+1] = strings[i+1], strings[i]
     return strings
